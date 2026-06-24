@@ -29,9 +29,9 @@ function App() {
     
     }
 
-    setUsers([...users,newUser]);
-    
-     
+    //setUsers([...users,newUser]);
+    setUsers( prevUsers => [...prevUsers, newUser]    )
+  
   }
   
 
