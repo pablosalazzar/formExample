@@ -3,7 +3,8 @@ import { useState } from "react";
 function App() {
   const [name, setName] = useState("");
   const [email,setEmail]= useState("");
-  const [edad, setEdad]= useState(0);
+  const [age, setAge]= useState(0);
+  const [users,setUsers] = useState([]);
 
   function handleNameChange (e){
     const currentValue = e.target.value;
@@ -17,8 +18,21 @@ function App() {
 
   function handleEdadChange (e){
     const currentValue = e.target.value;
-    setEdad(currentValue)
+    setAge(currentValue)
   };
+
+  function handleSaveUser(){
+    const newUser = { 
+      userName : name, 
+      userEmail : email, 
+      userAge : age
+    
+    }
+
+    setUsers([...users,newUser]);
+    
+     
+  }
   
 
   return (
@@ -36,7 +50,7 @@ function App() {
         <input type="text"  onChange={(handleEdadChange)} />
 
         <div>
-          <button>Add user</button>
+          <button type="button" onClick={handleSaveUser}>Add user</button>
         </div>
       </form>
 
