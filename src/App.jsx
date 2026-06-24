@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <h1> My form </h1>
+    <h1> User form </h1>
 
     <form >
       <p>Name</p>
