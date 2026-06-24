@@ -17,6 +17,15 @@ function App() {
       <p>Edad</p>
       <input type="text" />
     </form>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Edad</th>
+      </tr>
+    </table>
     </>
   )
 }
